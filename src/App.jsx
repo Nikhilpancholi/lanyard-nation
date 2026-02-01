@@ -7,6 +7,7 @@ import { PriceCalculator } from './components/PriceCalculator'
 import { WhyLanyardNation } from './components/WhyLanyardNation'
 import { WhatsAppChat } from './components/WhatsAppChat'
 import { AIBot } from './components/AIBot'
+import { Footer } from './components/Footer'
 
 const App = () => {
   return (
@@ -139,7 +140,7 @@ const App = () => {
         </section>
       </main>
 
-      <footer />
+      <Footer />
 
       {/* floating elements  */}
       <WhatsAppChat />
