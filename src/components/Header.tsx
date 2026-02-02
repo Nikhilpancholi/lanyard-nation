@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import logo from '../assets/ln-logo.jpeg'
+import logoImage from '../assets/logo.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +23,15 @@ export function Header() {
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* logo */}
+          {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Lanyard Nation" className="w-20 md:w-24" />
+            <a href="#" className="flex items-center">
+              <img 
+                src={logoImage} 
+                alt="Lanyard Nation - Looping You Into Style" 
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -58,14 +64,14 @@ export function Header() {
             >
               Get Quote
             </a>
-            {/* <a 
+            <a 
               href="https://wa.me/" 
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 border-2 border-[#2D7F88] text-[#2D7F88] rounded-lg hover:bg-[#2D7F88] hover:text-white transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
-            </a> */}
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
