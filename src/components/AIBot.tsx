@@ -100,7 +100,7 @@ export function AIBot() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 right-24 z-40 w-14 h-14 bg-gradient-to-br from-[#2D7F88] to-[#0F2E4D] rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
+        className="fixed bottom-24 right-8 z-40 w-14 h-14 bg-gradient-to-br from-[#2D7F88] to-[#0F2E4D] rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
       >
         <Bot className="w-7 h-7 text-white" />
         <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#FF8C42] rounded-full flex items-center justify-center">
