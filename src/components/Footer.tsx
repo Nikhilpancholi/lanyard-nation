@@ -132,7 +132,7 @@ export function Footer() {
               <h3 className="font-bold text-2xl mb-2">Get Exclusive Offers</h3>
               <p className="text-white/80">Subscribe to our newsletter for special discounts and new product updates.</p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap" >
               <input 
                 type="email" 
                 placeholder="Enter your email"

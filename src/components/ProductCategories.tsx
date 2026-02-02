@@ -16,7 +16,7 @@ export function ProductCategories() {
       title: 'Festival Wristbands',
       description: 'Durable and secure for events',
       price: 'From £0.15',
-      image: 'https://images.unsplash.com/photo-1763733592968-48f69ffbd136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZXN0aXZhbCUyMHdyaXN0YmFuZHN8ZW58MXx8fHwxNzY5OTM1NDk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://images.unsplash.com/photo-1755536751131-065a4d42fcc3?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       popular: false
     },
     {
