@@ -23,7 +23,7 @@ export function HeroSection() {
       </div>
 
       {/* Background Image Overlay with Parallax */}
-      <motion.div 
+      {/* <motion.div 
         className="absolute inset-0 opacity-20"
         style={{ y, opacity }}
       >
@@ -32,7 +32,7 @@ export function HeroSection() {
           alt="Colorful lanyards"
           className="w-full h-full object-cover"
         />
-      </motion.div>
+      </motion.div> */}
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
