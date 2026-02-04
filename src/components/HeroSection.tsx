@@ -64,9 +64,9 @@ export function HeroSection() {
               <p className="text-xl lg:text-2xl text-white/90 max-w-xl">
                 Design. Print. Deliver. Fast.
               </p>
-              <p className="text-lg text-[#FF8C42] font-semibold">
+              {/* <p className="text-lg text-[#FF8C42] font-semibold">
                 Bulk Orders? Best Rates Guaranteed.
-              </p>
+              </p> */}
             </motion.div>
 
             {/* Features List */}

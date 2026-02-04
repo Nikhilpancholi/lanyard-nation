@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logoImage from '../assets/logoo.png';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ export function Footer() {
       { label: 'Quality Promise', href: '#quality' },
       { label: 'Sustainability', href: '#eco' },
       { label: 'Case Studies', href: '#cases' },
-      { label: 'Blog', href: '#blog' }
+      { label: 'Customer Reviews', href: '#reviews' }
     ],
     support: [
       { label: 'Help Center', href: '#help' },
@@ -30,7 +31,7 @@ export function Footer() {
     ],
     legal: [
       { label: 'Privacy Policy', href: '#privacy' },
-      { label: 'Terms of Service', href: '#terms' },
+      { label: 'Terms And Conditions', href: '#terms' },
       { label: 'Cookie Policy', href: '#cookies' },
       { label: 'Refund Policy', href: '#refunds' }
     ]
@@ -44,13 +45,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#2D7F88] to-[#6EB5B7] flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">LN</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-white text-xl leading-none">Lanyard</span>
-                <span className="font-bold text-[#6EB5B7] text-xl leading-none">Nation</span>
-              </div>
+              {/* logo apply filter to white*/}
+              <img 
+                src={logoImage} 
+                alt="Lanyard Nation Logo" 
+                className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 h-auto object-contain"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </div>
             <p className="text-white/80 mb-6 max-w-sm">
               Your trusted partner for custom lanyards and wristbands. Quality, speed, and affordability in one platform.
@@ -60,10 +61,21 @@ export function Footer() {
             <div className="space-y-3">
               <a href="tel:+441234567890" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
+                <p>Toll Free : </p>
+                <span>+44 123 456 7890</span>
+              </a>
+              <a href="tel:+441234567890" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <Phone className="w-5 h-5" />
                 <span>+44 123 456 7890</span>
               </a>
               <a href="mailto:hello@lanyardnation.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
+                <p>Sales : </p>
+                <span>hello@lanyardnation.com</span>
+              </a>
+              <a href="mailto:hello@lanyardnation.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <Mail className="w-5 h-5" />
+                <p>Support : </p>
                 <span>hello@lanyardnation.com</span>
               </a>
               <div className="flex items-start gap-3 text-white/80">

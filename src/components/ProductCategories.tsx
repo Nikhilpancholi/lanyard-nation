@@ -8,7 +8,7 @@ export function ProductCategories() {
       title: 'Custom Lanyards',
       description: 'Personalized with your logo and colors',
       price: 'From £0.30',
-      image: 'https://images.unsplash.com/photo-1507754530579-81071428eefb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b20lMjBwcmludGVkJTIwbGFueWFyZHxlbnwxfHx8fDE3Njk5MzU0OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://i.pinimg.com/736x/c7/3d/b1/c73db12f8e888dc6854bd0fba90b70e0.jpg',
       popular: true
     },
     {
@@ -16,7 +16,7 @@ export function ProductCategories() {
       title: 'Festival Wristbands',
       description: 'Durable and secure for events',
       price: 'From £0.15',
-      image: 'https://images.unsplash.com/photo-1755536751131-065a4d42fcc3?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://i.pinimg.com/1200x/cd/0c/72/cd0c727d825db48b74a651e3ad6217e0.jpg',
       popular: false
     },
     {
@@ -24,7 +24,7 @@ export function ProductCategories() {
       title: 'Silicone Wristbands',
       description: 'Comfortable and customizable',
       price: 'From £0.25',
-      image: 'https://images.unsplash.com/photo-1649030616673-4ebdb7585843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaWxpY29uZSUyMHdyaXN0YmFuZHMlMjBjb2xvcmZ1bHxlbnwxfHx8fDE3Njk5MzU0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://i.pinimg.com/736x/1c/42/41/1c42417c12dd8be429cc0f102d3b6a48.jpg',
       popular: false
     },
     {
@@ -32,7 +32,7 @@ export function ProductCategories() {
       title: 'ID Card Holders',
       description: 'Professional badge accessories',
       price: 'From £0.50',
-      image: 'https://images.unsplash.com/photo-1673687787025-491af34cbc5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpZCUyMGNhcmQlMjBob2xkZXIlMjBiYWRnZXxlbnwxfHx8fDE3Njk5MzU0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://i.pinimg.com/1200x/c2/f8/f9/c2f8f9ab10337290f9dfb1ffa2322f9b.jpg',
       popular: false
     },
     {
@@ -40,7 +40,7 @@ export function ProductCategories() {
       title: 'Plain Lanyards',
       description: 'Stock colors, ready to ship',
       price: 'From £0.20',
-      image: 'https://images.unsplash.com/photo-1583550267771-ba7e951bee9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGxhbnlhcmRzJTIwaGFuZ2luZyUyMG9mZmljZXxlbnwxfHx8fDE3Njk5MzU0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://lanyardstomorrow.co.uk/media/catalog/product/cache/dc3a7a356917c25fcd07890dc904fd5b/l/t/lt-plain-retractable-main.jpg',
       popular: false
     },
     {
@@ -48,7 +48,7 @@ export function ProductCategories() {
       title: 'Eco Collection',
       description: 'Sustainable & eco-friendly materials',
       price: 'From £0.40',
-      image: 'https://images.unsplash.com/photo-1587569298236-28ceab2d321e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwYmFkZ2UlMjBsYW55YXJkfGVufDF8fHx8MTc2OTkzNTQ3MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://i.pinimg.com/736x/5e/93/6b/5e936b6dfef92b0bddd982f58c518a74.jpg',
       popular: true
     }
   ];

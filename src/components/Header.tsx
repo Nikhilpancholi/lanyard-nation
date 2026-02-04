@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/logoo.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ export function Header() {
               <img 
                 src={logoImage} 
                 alt="Lanyard Nation - Looping You Into Style" 
-                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+                className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 h-auto object-contain"
               />
             </a>
           </div>
