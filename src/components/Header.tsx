@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import logoImage from '../assets/logoo.png';
+import MobileLogo from '../assets/mobile-logo.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,10 +27,24 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <img 
+              {/* <img 
                 src={logoImage} 
                 alt="Lanyard Nation - Looping You Into Style" 
                 className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 h-auto object-contain"
+              /> */}
+
+
+              {/* Mobile Logo */}
+              <img 
+                src={MobileLogo} 
+                alt="Lanyard Nation - Looping You Into Style" 
+                className="lg:hidden w-12 sm:w-16 h-auto object-contain"
+              />
+              {/* Desktop Logo */}
+              <img 
+                src={logoImage} 
+                alt="Lanyard Nation - Looping You Into Style" 
+                className="hidden lg:block md:w-20 lg:w-24 xl:w-28 h-auto object-contain"
               />
             </a>
           </div>

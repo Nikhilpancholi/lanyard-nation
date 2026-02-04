@@ -1,5 +1,6 @@
 import { Award, Clock, DollarSign, Sparkles, UserCheck, Bot } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import lanyardImg from '../assets/lanyardImg.jpeg';
 
 export function WhyLanyardNation() {
   const benefits = [
@@ -56,7 +57,7 @@ export function WhyLanyardNation() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1706895247302-20d321119c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwcHJpbnRpbmclMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc2OTkzNTU2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={lanyardImg}
                 alt="Production facility"
                 className="w-full h-[500px] object-cover"
               />
