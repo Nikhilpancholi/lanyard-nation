@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoImage from '../assets/logoo.png';
 import MobileLogo from '../assets/mobile-logo.png';
+
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,26 +51,29 @@ export function Header() {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
+            {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#products" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            <Link to="/products" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Products
-            </a>
-            <a href="#pricing" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            </Link>
+            <Link to="/pricing" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Pricing
-            </a>
-            <a href="#bulk-orders" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            </Link>
+            <a href="/#bulk-orders" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Bulk Orders
             </a>
-            <a href="#eco-range" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            <a href="/#eco-range" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Eco Range
             </a>
-            <a href="#about" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            <Link to="/about" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               About
-            </a>
-            <a href="#contact" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            </Link>
+            <Link to="/contact" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Contact
-            </a>
+            </Link>
+            {/* <Link to="/blog" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+              Blog
+            </Link> */}
           </nav>
 
           {/* Right Side Buttons */}
@@ -103,50 +108,57 @@ export function Header() {
           <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
               <a 
-                href="#products" 
+                href="/#products" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </a>
-              <a 
-                href="#pricing" 
+              <Link
+                to="/pricing" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </a>
+              </Link>
               <a 
-                href="#bulk-orders" 
+                href="/#bulk-orders" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Bulk Orders
               </a>
               <a 
-                href="#eco-range" 
+                href="/#eco-range" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Eco Range
               </a>
-              <a 
-                href="#about" 
+              <Link
+                to="/about" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </a>
-              <a 
-                href="#contact" 
+              </Link>
+              <Link
+                to="/contact" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
+              <Link
+                to="/blog" 
+                className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
               <div className="flex flex-col gap-3 pt-4">
                 <a 
-                  href="#quote" 
+                  href="/#quote" 
                   className="px-6 py-3 bg-[#2D7F88] text-white rounded-lg hover:bg-[#0F2E4D] transition-all duration-300 font-semibold uppercase tracking-wide text-sm text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
