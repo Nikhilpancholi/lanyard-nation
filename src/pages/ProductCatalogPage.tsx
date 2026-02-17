@@ -347,7 +347,7 @@ export function ProductCatalogPage() {
                 {/* Mega Menu Dropdown */}
                 {activeCategory === category.id && category.subcategories.length > 0 && (
                   <div
-                    className="absolute top-full left-0 bg-white shadow-2xl border border-gray-200 rounded-lg mt-0 min-w-[300px] z-50"
+                    className="absolute top-full left-0 bg-white shadow-2xl border border-gray-200 rounded-lg mt-0 min-w-[300px] z-50 overflow-hidden"
                     onMouseEnter={() => handleMouseEnter(category.id)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -373,11 +373,11 @@ export function ProductCatalogPage() {
       {/* All Categories Mega Menu (Optional - shown on All Products hover) */}
       {activeCategory === 'all-products' && (
         <div
-          className="bg-white shadow-2xl border-t border-gray-200 z-40"
+          className="bg-white shadow-2xl border-t border-gray-200 z-60 "
           onMouseEnter={() => handleMouseEnter('all-products')}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8" >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4">
               {allSubcategories.map((sub) => (
                 <Link

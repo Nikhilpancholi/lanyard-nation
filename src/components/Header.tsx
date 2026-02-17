@@ -28,7 +28,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               {/* <img 
                 src={logoImage} 
                 alt="Lanyard Nation - Looping You Into Style" 
@@ -48,7 +48,7 @@ export function Header() {
                 alt="Lanyard Nation - Looping You Into Style" 
                 className="hidden lg:block md:w-20 lg:w-24 xl:w-28 h-auto object-contain"
               />
-            </a>
+            </Link>
           </div>
 
             {/* Desktop Navigation */}
