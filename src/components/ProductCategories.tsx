@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
+import { Link } from 'react-router-dom';
 export function ProductCategories() {
   const products = [
     {
@@ -105,13 +105,13 @@ export function ProductCategories() {
                   <span className="text-2xl font-bold text-[#0F2E4D]">
                     {product.price}
                   </span>
-                  <a 
-                    href={`#pricing-${product.id}`}
+                  <Link 
+                    to={"/products"}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#2D7F88] text-white rounded-lg hover:bg-[#0F2E4D] transition-all duration-300 font-semibold group-hover:gap-3"
                   >
                     View Pricing
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 

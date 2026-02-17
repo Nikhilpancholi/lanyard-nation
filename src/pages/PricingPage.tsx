@@ -179,14 +179,14 @@ export function PricingPage() {
                               tier.popular ? 'bg-[#2D7F88]/5' : index % 2 === 0 ? 'bg-white' : 'bg-[#F7F9FB]'
                             } hover:bg-[#2D7F88]/10 transition-colors relative`}
                           >
-                            {tier.popular && (
+                            {/* {tier.popular && (
                               <td colSpan={5} className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                                 <span className="inline-flex items-center gap-1 px-4 py-1 bg-[#FF8C42] text-white rounded-full text-xs font-bold uppercase">
                                   <Star className="w-3 h-3 fill-current" />
                                   Most Popular
                                 </span>
                               </td>
-                            )}
+                            )} */}
                             <td className={`px-6 ${tier.popular ? 'pt-8 pb-4' : 'py-4'} font-semibold text-[#0F2E4D]`}>
                               {tier.quantity} units
                             </td>

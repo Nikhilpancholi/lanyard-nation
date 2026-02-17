@@ -59,12 +59,12 @@ export function Header() {
             <Link to="/pricing" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Pricing
             </Link>
-            <a href="/#bulk-orders" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
+            {/* <a href="/#bulk-orders" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Bulk Orders
             </a>
             <a href="/#eco-range" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               Eco Range
-            </a>
+            </a> */}
             <Link to="/about" className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium">
               About
             </Link>
@@ -107,13 +107,13 @@ export function Header() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a 
-                href="/#products" 
+              <Link 
+                to="/products" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
-              </a>
+              </Link>
               <Link
                 to="/pricing" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
@@ -121,20 +121,6 @@ export function Header() {
               >
                 Pricing
               </Link>
-              <a 
-                href="/#bulk-orders" 
-                className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Bulk Orders
-              </a>
-              <a 
-                href="/#eco-range" 
-                className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Eco Range
-              </a>
               <Link
                 to="/about" 
                 className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
@@ -148,13 +134,6 @@ export function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
-              <Link
-                to="/blog" 
-                className="text-[#0F2E4D] hover:text-[#2D7F88] transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
               </Link>
               <div className="flex flex-col gap-3 pt-4">
                 <a 

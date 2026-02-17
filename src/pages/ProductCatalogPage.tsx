@@ -320,9 +320,9 @@ export function ProductCatalogPage() {
       </div>
 
       {/* Category Navigation with Mega Menu */}
-      <div className="bg-white border-b border-gray-200 sticky top-20 z-40">
+      <div className="bg-white border-b border-gray-200 sticky top-20 z-40 ">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center overflow-x-auto scrollbar-hide">
+          <div className="flex items-center ">
             {productCategories.map((category) => (
               <div
                 key={category.id}
@@ -376,6 +376,7 @@ export function ProductCatalogPage() {
           className="bg-white shadow-2xl border-t border-gray-200 z-60 "
           onMouseEnter={() => handleMouseEnter('all-products')}
           onMouseLeave={handleMouseLeave}
+          
         >
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8" >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4">
@@ -392,6 +393,9 @@ export function ProductCatalogPage() {
           </div>
         </div>
       )}
+
+
+
 
       {/* Products Section */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
