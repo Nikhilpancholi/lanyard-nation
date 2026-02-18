@@ -76,7 +76,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-wrap items-center gap-4 text-white/90 text-sm md:text-base"
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 ">
                 <CheckCircle2 className="w-5 h-5 text-[#6EB5B7]" />
                 Free Design Proof
               </span>

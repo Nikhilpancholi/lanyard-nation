@@ -293,6 +293,13 @@ export function ProductCatalogPage() {
     return matchesSearch && matchesCategory;
   });
 
+
+  // chatgpt adds
+  // const [activeCategory, setActiveCategory] = useState<string | null>(null);
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+// const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Search Bar Section */}
@@ -320,55 +327,129 @@ export function ProductCatalogPage() {
       </div>
 
       {/* Category Navigation with Mega Menu */}
-      <div className="bg-white border-b border-gray-200 sticky top-20 z-40 ">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center ">
-            {productCategories.map((category) => (
+      {/* ================= CATEGORY NAVIGATION ================= */}
+<div className="bg-white border-b border-gray-200 sticky top-20 z-40 relative">
+
+  <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* ================= DESKTOP NAV ================= */}
+    <div className="hidden lg:flex items-center">
+
+      {productCategories.map((category) => (
+        <div
+          key={category.id}
+          className="relative"
+          onMouseEnter={() =>
+            category.subcategories.length > 0 && handleMouseEnter(category.id)
+          }
+          onMouseLeave={handleMouseLeave}
+        >
+          <button
+            className="flex items-center gap-2 px-4 py-4 font-medium text-[#0F2E4D] hover:text-[#2D7F88] transition-colors"
+          >
+            {category.name}
+            {category.subcategories.length > 0 && (
+              <ChevronDown className="w-4 h-4" />
+            )}
+          </button>
+
+          {/* Desktop Dropdown with Animation */}
+          {activeCategory === category.id &&
+            category.subcategories.length > 0 && (
               <div
-                key={category.id}
-                className="relative"
-                onMouseEnter={() => category.subcategories.length > 0 && handleMouseEnter(category.id)}
+                className="absolute top-full left-0 bg-white shadow-2xl border border-gray-200 rounded-lg min-w-[280px] z-50 animate-fadeIn"
+                onMouseEnter={() => handleMouseEnter(category.id)}
                 onMouseLeave={handleMouseLeave}
               >
-                <button
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-4 whitespace-nowrap font-medium transition-colors ${
-                    selectedCategory === category.id
-                      ? 'text-[#2D7F88] border-b-2 border-[#2D7F88]'
-                      : 'text-[#0F2E4D] hover:text-[#2D7F88]'
-                  }`}
-                >
-                  {category.name}
-                  {category.subcategories.length > 0 && (
-                    <ChevronDown className="w-4 h-4" />
-                  )}
-                </button>
-
-                {/* Mega Menu Dropdown */}
-                {activeCategory === category.id && category.subcategories.length > 0 && (
-                  <div
-                    className="absolute top-full left-0 bg-white shadow-2xl border border-gray-200 rounded-lg mt-0 min-w-[300px] z-50 overflow-hidden"
-                    onMouseEnter={() => handleMouseEnter(category.id)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="p-4 grid grid-cols-1 gap-2">
-                      {category.subcategories.map((sub) => (
-                        <Link
-                          key={sub.id}
-                          to={`/products/${sub.slug}`}
-                          className="px-4 py-2 text-[#0F2E4D] hover:bg-[#F7F9FB] hover:text-[#2D7F88] rounded-lg transition-colors"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <div className="p-4 space-y-2">
+                  {category.subcategories.map((sub) => (
+                    <Link
+                      key={sub.id}
+                      to={`/products/${sub.slug}`}
+                      className="block px-4 py-2 rounded-lg hover:bg-[#F7F9FB] text-sm"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            )}
         </div>
+      ))}
+    </div>
+
+    {/* ================= MOBILE TRIGGER ================= */}
+    <div className="lg:hidden flex justify-between items-center py-4">
+      <span className="font-semibold text-[#0F2E4D]">Categories</span>
+      <button
+        onClick={() => setMobileMenuOpen(true)}
+        className="text-[#2D7F88] font-medium"
+      >
+        Browse
+      </button>
+    </div>
+  </div>
+
+  {/* ================= MOBILE DRAWER ================= */}
+  {mobileMenuOpen && (
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 bg-black/40 z-40"
+        onClick={() => setMobileMenuOpen(false)}
+      />
+
+      {/* Drawer */}
+      <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 p-6 overflow-y-auto animate-slideIn">
+
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-lg font-bold">Categories</h2>
+          <button onClick={() => setMobileMenuOpen(false)}>✕</button>
+        </div>
+
+        {productCategories.map((category) => (
+          <div key={category.id} className="border-b border-gray-100">
+
+            <button
+              onClick={() =>
+                setActiveCategory(
+                  activeCategory === category.id ? null : category.id
+                )
+              }
+              className="w-full flex justify-between items-center py-4 font-medium"
+            >
+              {category.name}
+              {category.subcategories.length > 0 && (
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    activeCategory === category.id ? "rotate-180" : ""
+                  }`}
+                />
+              )}
+            </button>
+
+            {activeCategory === category.id &&
+              category.subcategories.length > 0 && (
+                <div className="pl-4 pb-4 space-y-2">
+                  {category.subcategories.map((sub) => (
+                    <Link
+                      key={sub.id}
+                      to={`/products/${sub.slug}`}
+                      className="block text-sm text-gray-600 py-1"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+          </div>
+        ))}
       </div>
+    </>
+  )}
+
+</div>
+
 
       {/* All Categories Mega Menu (Optional - shown on All Products hover) */}
       {activeCategory === 'all-products' && (
@@ -400,7 +481,7 @@ export function ProductCatalogPage() {
       {/* Products Section */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Filters and View Controls */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 ">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setShowFilters(!showFilters)}
@@ -409,12 +490,12 @@ export function ProductCatalogPage() {
               <SlidersHorizontal className="w-5 h-5" />
               Filters
             </button>
-            <div className="text-[#5A5A5A]">
+            <div className="text-[#5A5A5A] hidden sm:block">
               Showing <span className="font-semibold text-[#0F2E4D]">{filteredProducts.length}</span> products
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <select className="px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-[#2D7F88] focus:outline-none">
               <option>Sort by: Featured</option>
               <option>Price: Low to High</option>
@@ -423,7 +504,7 @@ export function ProductCatalogPage() {
               <option>Best Selling</option>
             </select>
 
-            <div className="flex items-center gap-2 border-2 border-gray-200 rounded-lg p-1">
+            <div className="flex items-center gap-2 border-2 border-gray-200 rounded-lg p-1 hidden sm:block">
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded ${viewMode === 'grid' ? 'bg-[#2D7F88] text-white' : 'text-gray-400'}`}
@@ -514,7 +595,7 @@ export function ProductCatalogPage() {
 
         {/* Products Grid/List */}
         {viewMode === 'grid' ? (
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}

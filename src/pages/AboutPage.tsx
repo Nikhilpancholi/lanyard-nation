@@ -58,7 +58,7 @@ export function AboutPage() {
                 <div className="text-4xl font-bold text-[#2D7F88]">14+</div>
                 <div className="text-sm text-[#5A5A5A]">Years Experience</div>
               </div>
-              <div className="absolute -top-8 -right-8 bg-[#FF8C42] rounded-xl p-6 shadow-2xl text-white">
+              <div className="absolute -top-8 -right-4 sm:-right-8 bg-[#FF8C42] rounded-xl p-6 shadow-2xl text-white ">
                 <div className="text-4xl font-bold">10K+</div>
                 <div className="text-sm">Happy Clients</div>
               </div>

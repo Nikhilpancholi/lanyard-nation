@@ -220,7 +220,7 @@ export function Footer() {
       </div>
 
       {/* Trust Badges */}
-      <div className="bg-[#0a1e30] py-6">
+      {/* <div className="bg-[#0a1e30] py-6">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-8 text-white/60 text-sm">
             <div className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

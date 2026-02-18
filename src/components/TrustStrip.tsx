@@ -18,11 +18,6 @@ export function TrustStrip() {
       description: 'Sustainable options'
     },
     {
-      icon: Percent,
-      title: 'Bulk Discounts',
-      description: 'Save up to 30%'
-    },
-    {
       icon: Users,
       title: 'Free Design',
       description: 'Expert assistance'
@@ -32,7 +27,7 @@ export function TrustStrip() {
   return (
     <section className="bg-[#F7F9FB] py-12 border-t border-gray-200">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
